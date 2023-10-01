@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 
 const UpdateEmployee = () => {
     return (
@@ -8,7 +9,7 @@ const UpdateEmployee = () => {
                     <div className="card col-md-6 offset-md-3">
                         <div className="card-body">
                             <form>
-                                <div className="form-group">
+                                <div className="form-group mb-3">
                                     <label> First Name: </label>
                                     <input className="form-control"
                                         placeholder="First Name"
@@ -16,7 +17,7 @@ const UpdateEmployee = () => {
                                     //value={}
                                     />
                                 </div>
-                                <div className="form-group">
+                                <div className="form-group mb-3">
                                     <label> Last Name: </label>
                                     <input className="form-control"
                                         placeholder="Last Name"
@@ -24,7 +25,7 @@ const UpdateEmployee = () => {
                                     //value={}
                                     />
                                 </div>
-                                <div className="form-group">
+                                <div className="form-group mb-3">
                                     <label> Email Id: </label>
                                     <input className="form-control"
                                         placeholder="Email Address"
@@ -34,7 +35,9 @@ const UpdateEmployee = () => {
                                 </div>
 
                                 <button className="btn btn-success">Update</button>
+                                <Link to={'/'}>
                                 <button className="btn btn-danger" style={{ marginLeft: '10px' }}>Cancel</button>
+                                </Link>
                             </form>
                         </div>
                     </div>
