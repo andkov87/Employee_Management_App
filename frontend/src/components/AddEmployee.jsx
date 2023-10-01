@@ -37,12 +37,14 @@ const AddEmployee = () => {
     <div>
       <br></br>
       <div className="container">
+        <h2 className="text-center mt-5">Add Employee</h2>
+        <br></br>
         <div className="row">
           <div className="card col-md-6 offset-md-3">
             <div className="card-body">
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label> First Name: </label>
+                  <label> First Name </label>
                   <input className="form-control mb-3"
                     placeholder="First Name"
                     name="firstName"
@@ -51,7 +53,7 @@ const AddEmployee = () => {
                   />
                 </div>
                 <div className="form-group mb-3">
-                  <label> Last Name: </label>
+                  <label> Last Name </label>
                   <input className="form-control"
                     placeholder="Last Name"
                     name="lastName"
@@ -60,7 +62,7 @@ const AddEmployee = () => {
                   />
                 </div>
                 <div className="form-group mb-3">
-                  <label> Email Id: </label>
+                  <label> Email Id </label>
                   <input className="form-control"
                     placeholder="Email Address"
                     name="emailId"

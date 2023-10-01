@@ -20,43 +20,43 @@ const EmployeeList = () => {
     return (
         <div>
             <div className='container'>
-                <h2 className='text-center mt-5'>Employee List</h2>
+                <h2 className='text-center mt-5'>Employee List</h2>               
                 <br></br>
-                <div className='row text-center'>
-                    <Link to={'/add'}>
-                        <button className='btn btn-primary'><strong>Add Employee</strong></button>
-                    </Link>
-                </div>
-                <br></br>
-                <div className='row mt-2'>
-                    <table className='table table-striped table-boarded'>
-
+                <div className='row mt-2 text-center '>
+                    <table className='table table-striped mx-auto'>
                         <thead>
                             <tr>
                                 <th>Employee First Name</th>
                                 <th>Employee Last Name</th>
-                                <th>Employee Id</th>
+                                <th>Employee Email Id</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody className="align-middle border border-secondary-subtle border-4">
                             {employeeData && employeeData.map((employee) =>
                                 <tr key={employee.id}>
                                     <td>{employee.firstName}</td>
                                     <td>{employee.lastName}</td>
-                                    <td>{employee.id}</td>
+                                    <td>{employee.emailId}</td>
                                     <td>
+                                        <div className="d-flex justify-content-center gap-3">
                                         <Link to={'/update'}>
-                                            <button className='btn btn-info'>Update</button>
+                                            <button className='btn btn-info'><strong>Update</strong></button>
                                         </Link>
-                                        <button className='btn btn-danger' style={{ marginLeft: '10px' }} onClick={() => handleDeleteEmployee(employee.id)}>Delete</button>
-                                        <button className='btn btn-info' style={{ marginLeft: '10px' }}>View</button>
+                                        <button className='btn btn-danger' onClick={() => handleDeleteEmployee(employee.id)}><strong>Delete</strong></button>
+                                        <button className='btn btn-info'><strong>View</strong></button>
+                                        </div>
                                     </td>
                                 </tr>
                             )}
                         </tbody>
-                    </table>
+                    </table>                
+                </div>
+                <div className='row text-center mt-2'>
+                    <Link to={'/add'}>
+                        <button className='btn btn-primary'><strong>Add Employee</strong></button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -5,6 +5,8 @@ const UpdateEmployee = () => {
         <div>
             <br></br>
             <div className="container">
+                <h2 className='text-center mt-5'>Update Employee</h2>
+                <br></br>
                 <div className="row">
                     <div className="card col-md-6 offset-md-3">
                         <div className="card-body">
