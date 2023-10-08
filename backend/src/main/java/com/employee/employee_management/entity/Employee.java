@@ -24,4 +24,7 @@ public class Employee {
 
     @Column (name = "email_id")
     private String emailId;
+
+    @Column(name = "profiler_pic", columnDefinition = "LONGTEXT")
+    private byte[] profile_pic;
 }

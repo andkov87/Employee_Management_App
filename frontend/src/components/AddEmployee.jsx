@@ -7,7 +7,7 @@ const AddEmployee = () => {
   const [newEmployee, setNewEmployee] = useState({
     firstName: "",
     lastName: "",
-    emailId: ""
+    emailId: "",
   })
 
   const handleInputChange = (e) => {
@@ -25,7 +25,7 @@ const AddEmployee = () => {
       setNewEmployee({
         firstName: "",
         lastName: "",
-        emailId: ""
+        emailId: "",
       });
 
     } catch (error) {

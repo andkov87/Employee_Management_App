@@ -52,7 +52,9 @@ const EmployeeList = () => {
                                             <button className='btn btn-info'><strong>Update</strong></button>
                                         </Link>
                                         <button className='btn btn-danger' onClick={() => handleDeleteEmployee(employee.id)}><strong>Delete</strong></button>
+                                        <Link to={'/view'}>
                                         <button className='btn btn-info'><strong>View</strong></button>
+                                        </Link>
                                         </div>
                                     </td>
                                 </tr>
