@@ -1,10 +1,17 @@
 import useEmployeeData from '../hooks/useEmployeeData';
 import axiosInstance from '../AxiosConfig';
 import { Link } from 'react-router-dom';
+import { useEmployeeContext } from '../hooks/useEmployeeContext.jsx';
+
 
 const EmployeeList = () => {
     const [employeeData, fetchEmployeeData] = useEmployeeData();
+    const { selectedEmployee, setSelectedEmployee } = useEmployeeContext();
 
+
+    const handleEmployeeClick = (employee) => {
+        setSelectedEmployee(employee);
+    }
 
     const handleDeleteEmployee = async (employeeId) => {
         try {
@@ -35,7 +42,7 @@ const EmployeeList = () => {
 
                         <tbody className="align-middle border border-secondary-subtle border-4">
                             {employeeData && employeeData.map((employee) =>
-                                <tr key={employee.id}>
+                                <tr className={`${selectedEmployee && selectedEmployee.id === employee.id ? 'active' : ''}`} key={employee.id} onClick={() => handleEmployeeClick(employee)}>
                                     <td>{employee.firstName}</td>
                                     <td>{employee.lastName}</td>
                                     <td>{employee.emailId}</td>
